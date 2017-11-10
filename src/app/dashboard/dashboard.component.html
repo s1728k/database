@@ -1,0 +1,25 @@
+<md-toolbar color="primary" style="padding-top:0px;margin-top:0px;">
+	<!-- <button md-icon-button>
+	  <m-icon [iconName]="'ic_domain_white_24px'"></m-icon>
+	</button> -->
+	Cloud Based License Management System
+	<span class="spacer"></span>
+	<button md-button [routerLink]="['/cblms-home']">
+		Home
+	</button>
+	<button md-button [routerLink]="['/cblms-home/login']">
+		Api Login
+	</button>
+	<button md-button [routerLink]="['/cblms-home/signup']">
+		Api SignUp
+	</button>
+	<button md-button [routerLink]="['/cblms-home/contact']">
+		Contact
+	</button>
+</md-toolbar>
+
+<router-outlet></router-outlet>
+
+<div class="spa-warning">
+	<p>Warning: This is Single Page Application do not use direct links in browser address bar</p>
+</div>

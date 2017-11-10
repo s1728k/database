@@ -1,0 +1,91 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="heading">License Test Bench</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h5 class="heading">For Activation</h5>
+      <table>
+        <caption>Input Json</caption>
+        <tr>
+          <th>{{ '{' }}</th>
+        </tr>
+        <tr>
+          <th>"api_token":"{{licenseActivateInp['api_token']}}",</th>
+        </tr>
+        <tr>
+          <th>"serial_no":"<input type="text" [(ngModel)]="licenseActivateInp['serial_no']">"</th>
+        </tr>
+        <tr>
+          <th>{{ '}' }}</th>
+        </tr>
+      </table>
+      <table>
+        <caption>Output Json</caption>
+        <tr>
+          <th>{{ '{' }}</th>
+        </tr>
+        <tr>
+          <th>"status":"{{licenseActivateOut['status']}}",</th>
+        </tr>
+        <tr>
+          <th>"product_key":"{{licenseActivateOut['product_key']}}",</th>
+        </tr>
+        <tr>
+          <th>"expiry_date":"{{licenseActivateOut['expiry_date']}}",</th>
+        </tr>
+        <tr>
+          <th>"host":"{{licenseActivateOut['host']}}"</th>
+        </tr>
+        <tr>
+          <th>{{ '}' }}</th>
+        </tr>
+      </table>
+      <p>Send as post body to route:- (*host domain name)/license/activate</p>
+      <button md-raised-button color="primary" (click)="activateSerialLicense()">Activate</button>
+    </div>
+    <div class="col-md-6">
+      <h5 class="heading">For De-activation</h5>
+      <table>
+        <caption>Input Json</caption>
+        <tr>
+          <th>{{ '{' }}</th>
+        </tr>
+        <tr>
+          <th>"api_token":"{{licenseDeactivateInp['api_token']}}",</th>
+        </tr>
+        <tr>
+          <th>"serial_no":"<input type="text" [(ngModel)]="licenseDeactivateInp['serial_no']">"</th>
+        </tr>
+        <tr>
+          <th>"product_key":"<input type="text" [(ngModel)]="licenseDeactivateInp['product_key']">"</th>
+        </tr>
+        <tr>
+          <th>{{ '}' }}</th>
+        </tr>
+      </table>
+      <table>
+        <caption>Output Json</caption>
+        <tr>
+          <th>{{ '{' }}</th>
+        </tr>
+        <tr>
+          <th>"status":"{{licenseDeactivateOut['status']}}"</th>
+        </tr>
+        <tr>
+          <th>{{ '}' }}</th>
+        </tr>
+      </table>
+      <p>Send as post body to route:- (*host domain name)/license/deactivate</p>
+      <button md-raised-button color="primary" (click)="deActivateSerialLicense()">De-activate</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p>* Currently host domain name is - http://cblms.000webhostapp.com</p>
+    </div>
+  </div>
+
+</div>

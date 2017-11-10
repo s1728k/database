@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row" style="height: 10vh;"></div>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-3">
+      <md-card class="login_details">
+        <label style="text-align: left" for="name">Name</label>
+        <input mdInput type="text" class="full-width" id="name" name="name" [(ngModel)]="register['name']" />
+        <label style="text-align: left" for="name">Phone No</label>
+        <input mdInput type="text" class="full-width" id="phone" name="phone" [(ngModel)]="register['phone']" />
+        <label style="text-align: left" for="name">email</label>
+        <input mdInput type="email" class="full-width" name="email" [(ngModel)]="register['email']" />
+        <label style="text-align: left" for="name">Message</label>
+        <textarea name="message" cols="3" class="full-width" [(ngModel)]="register['message']"></textarea>
+      </md-card>
+      <button md-raised-button color="primary" (click)="signup()">Register</button>
+    </div>
+    <div class="col-md-10"></div>
+  </div>
+</div>
