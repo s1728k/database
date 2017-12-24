@@ -1,0 +1,144 @@
+.toolbar{
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: 3;
+  box-shadow: 0px 3px 3px #888888;
+}
+
+.roundimg{
+  border-radius: 0.2em;
+  width: 2em;
+  height: 2em;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+/* .example-spacer {
+  flex: 1 1 auto;
+} */
+
+#userPopup{
+  width: 300px;
+  height: 100px;
+  position: fixed;
+  border: 0px solid red;
+  top: 10%;
+  right: 1%;
+  z-index: 3;
+  display: inline-flex;
+  box-shadow: 2px 2px 2px #888888;
+  background-color: white;
+}
+
+.roundimgUser{
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
+
+.talk-bubble {
+  content: ' ';
+  position: fixed;
+  width: 0;
+  height: 0;
+  right: 1.75%;
+  top: 7%;
+  border: 12px solid;
+  border-color: transparent transparent white transparent;
+}
+
+.example-sidenav-fab-container {
+  width: 100%;
+  height: 100vh;
+  /*height: calc(100vh - 64px);*/
+  border: 0px solid rgba(0, 0, 0, 0.5);
+  /*margin-top: 4.5%;  Add a top margin to avoid content overlay */
+  /*  border: 1px solid red;*/
+}
+
+.example-sidenav-fab-container md-sidenav {
+  max-width: 15%;
+  width:15%;
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  margin-top: 0%; /* Add a top margin to avoid content overlay */
+  /*  border: 1px solid red;*/
+}
+
+.example-sidenav-fab-container .mat-sidenav-content,
+.example-sidenav-fab-container md-sidenav {
+  display: flex;
+  overflow: visible;
+  margin-top: 0%; /* Add a top margin to avoid content overlay */
+}
+
+.example-scrolling-content {
+  overflow: auto;
+  width: 100%;
+}
+
+.example-fab {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+
+.submenu{
+  margin-left: 10px;
+}
+
+.example-container {
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+
+.ni{
+  -ms-transform: rotate(20deg); /* IE 9 */
+  -webkit-transform: rotate(20deg); /* Safari */
+  transform: rotate(-90deg); /* Standard syntax */
+  transition: transform 0.5s;
+}
+.nir{
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Safari */
+  transform: rotate(0deg); /* Standard syntax */
+  transition: transform 0.5s;
+}
+
+.exp{
+  /*-ms-transform: scale(1, 1); !* IE 9 *!*/
+  /*-webkit-transform: scale(1, 1); !* Safari *!*/
+  /*transform: scale(1, 1);*/
+  transform: translate(0px, 0px);
+  transition: transform 0.5s;
+}
+
+.expr{
+  /*-ms-transform: scale(1, 0); !* IE 9 *!*/
+  /*-webkit-transform: scale(1, 0); !* Safari *!*/
+  /*transform: scale(1, 0);*/
+  transform: translate(-200px, -0px);
+  height: 0;
+  /*transition: transform 0.5s;*/
+}
+
+.spa-warning{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
