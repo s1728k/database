@@ -1,0 +1,16 @@
+.full-width{
+	width: 100%
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 1px solid green;
+  text-align: left;
+  padding-left: 2px;
+  font-size: 15px;
+  height: 20px;
+}

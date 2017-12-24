@@ -1,20 +1,147 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://blog.angular.io//">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container-fluid" style="background-color:lavender;">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 style="text-align-last: center;font-weight: bold;">VBA Obfuscator</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label>Step1 - Paste Your Code Here</label>
+            <textarea name="firstCode" rows="22" class="full-width" [(ngModel)]="firstCode"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-primary pull-right" (click)="getVariables()">Get Declared Variable Names</button>
+            <label>Step2 - Check and correct your program variables here</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label>String Names</label>
+            <textarea name="variables" rows="10" class="full-width" [(ngModel)]="stringNames"></textarea>
+        </div>
+        <div class="col-md-2">
+            <label>Declared Variables</label>
+            <textarea name="variables" rows="10" class="full-width" [(ngModel)]="varNames"></textarea>
+        </div>
+        <div class="col-md-2">
+            <label>Procedure Variables</label>
+            <textarea name="variables" rows="10" class="full-width" [(ngModel)]="procNames"></textarea>
+        </div>
+        <div class="col-md-2">
+            <label>Procedure Call Variables</label>
+            <textarea name="variables" rows="10" class="full-width" [(ngModel)]="procCallNames"></textarea>
+        </div>
+        <div class="col-md-2">
+            <label>Constant Names</label>
+            <textarea name="variables" rows="10" class="full-width" [(ngModel)]="constNames"></textarea>
+        </div>
+        <div class="col-md-2">
+            <label>Label Names</label>
+            <textarea name="variables" rows="10" class="full-width" [(ngModel)]="labelNames"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label>
+                Step3 - Enter Your Comma Seperated Un-Declared Variable Here
+            </label>
+            <textarea name="mvariables" rows="3" class="full-width" [(ngModel)]="udvarNames"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label>
+                Step4 - Enter Your Comma Seperated Module, Class Module and Form Names Here
+            </label>
+            <textarea name="modulenames" rows="3" class="full-width" [(ngModel)]="modNames"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-primary pull-right" (click)="getModHash()">Get Module Hash Names</button>
+            <label>
+                Step5 - Rename your module, class module or form names with their hash names
+            </label>
+            <table class="full-width">
+                <thead>
+                    <tr>
+                        <th>Module, Class Module or Form Name</th>
+                        <th>Module, Class Module or Form Hash Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of modHashNames; let i=index">
+                        <td>{{modNameList[i]}}</td>
+                        <td>{{modHashNames[i]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-primary pull-right" (click)="obfuscate()">Obfuscate !</button>
+            <label>Step6 - Copy Your Obfuscated Code Here</label>
+            <textarea name="lastCode" rows="22" class="full-width" [(ngModel)]="lastCode"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label>
+                
 
+
+                
+            </label>
+        </div>
+    </div>
+
+    <!-- <div class="row">
+        <div class="col-md-12">
+            <label>Instructions !</label>
+            <ul style="margin-bottom: 100px;">
+                <li>Enter Your Code in the text area as labeled </li>
+                <li>Obfuscator will detect the declared variables in your code </li>
+                <li>You will have to explicitly specify the undeclared variables, module names, class names and form names in the textarea given</li>
+                <li>Obfuscator will repalce all the instances of variables with it's MD5 hash starting with k letter</li>
+                <li>Additional sophistication shall be the future scope of this website</li>
+            </ul>
+        </div>
+    </div> -->
+<!--     <div class="row">
+        <div class="col-md-12">
+            <label>Contact Me</label>
+            <form>
+                <label style="margin-right: 22px;">Name:</label><input type="text" name="name"> <br>
+                <label style="margin-right: 24px;">Email:</label><input type="text" name="email"> <br>
+                <label style="margin-right: 00px;">Message:</label><br><textarea name="message" rows="6" cols="73"></textarea><br />
+                <input type="submit" value="Send" class="btn btn-primary"><input type="reset" value="Clear" class="btn btn-primary">
+            </form>
+        </div>
+    </div> -->
+</div>
+
+<!-- 
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+$("a").click(function(){
+//window.location.href = "https://www.000webhost.com/945091.html";
+$("a").attr("href", "https://www.000webhost.com/945091.html");
+});
+});
+$("#clk").click(function myFunction(){
+    var text = $("#inp1").val();
+    var oVar = $("#inp2").val();
+    text=obfuscatedCode(text,oVar);
+    //text=findStrings(text)
+    $("#ans").val(text);
+});
+</script>
+<div style='text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;'><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website_vbaobfuscator&utm_content=footer_img"><img src="https://cloud.githubusercontent.com/assets/23024110/20663010/9968df22-b55e-11e6-941d-edbc894c2b78.png"  alt="www.000webhost.com"></a></div></body>
+</html> -->
