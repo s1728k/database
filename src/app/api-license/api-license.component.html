@@ -1,0 +1,69 @@
+<!-- <md-toolbar color="primary" style="padding-top:0px;margin-top:0px;">
+    <button md-icon-button (click)="sidenav.toggle()">
+      <m-icon [iconName]="'ic_menu_white_24px'"></m-icon>
+    </button>
+    <p>Cloud Based License Management System</p>
+    <span class="spacer"></span>
+    <p>Api Access Token:- {{ api_token }}</p>
+    <button md-button (click)="userBool = !userBool">
+      <span #userbtn>User</span>
+    </button>
+</md-toolbar>
+
+<div #userpop id="userPopup" [style.display]="userBool ? 'inline-flex' : 'none'">
+  <div class="talk-bubble"></div>
+  <img md-list-avatar src="assets/images/person-placeholder.jpg" alt="..." class="roundimgUser">
+  <div class="roundimgUser">
+    <b>Sunil Kumar T</b><br>
+    s1728k@gmail.com<br>
+    <button md-raised-button color="primary">Log Out</button>
+  </div>
+</div>
+
+<md-sidenav-container class="example-sidenav-fab-container">
+  <md-sidenav #sidenav >
+    <div class="example-scrolling-content sscroll">
+      <md-nav-list dense>
+        <ng-container *ngFor="let menu of menus; let i=index">
+          <ng-container *ngIf="menu.length === 1">
+              <md-list-item (click)="route(paths[i][0])">
+                <a md-line><b>{{ menu[0] }}</b></a>
+              </md-list-item>
+          </ng-container>
+          <ng-container *ngIf="menu.length > 1">
+              <ng-container *ngFor="let s_menu of menu; let j=index">
+                <ng-container *ngIf="j === 0">
+                  <md-list-item (click)="changeFlag(i)">
+                      <a md-line><b>{{ menu[0] }}</b></a>
+                      <m-icon 
+                          [class.ni]="flag[i]" 
+                          [class.nir]="!flag[i]" 
+                          [iconName]="'ic_keyboard_arrow_down_black_24px'">
+                      </m-icon>
+                  </md-list-item>
+                </ng-container>
+                <ng-container *ngIf="flag[i] && j > 0">
+                    <div [class.exp]="flag[i]" [class.expr]="!flag[i]">
+                        <md-list-item 
+                            class="submenu" 
+                            (click)="route(paths[i][0] + paths[i][j])">
+                            <a md-line>{{ menu[j] }}</a>
+                        </md-list-item>
+                    </div>
+                </ng-container>
+                <md-divider></md-divider>
+              </ng-container>
+          </ng-container>
+        </ng-container>
+      </md-nav-list>
+    </div>
+  </md-sidenav>
+
+  <router-outlet></router-outlet>
+
+</md-sidenav-container>
+ -->
+<div class="spa-warning">
+  <p>Warning: This is Single Page Application do not use direct links in browser address bar</p>
+</div>
+<router-outlet></router-outlet>

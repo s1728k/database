@@ -1,0 +1,68 @@
+<!-- <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <table>
+        <caption>Licenses List</caption>
+        <thead>
+          <tr>
+            <th>
+              <m-icon (click)="addRecord()" [iconName]="'ic_add_box_black_24px'"></m-icon>
+            </th>
+            <th>Serial No</th>
+            <th>Status</th>
+            <th>Licensed To</th>
+            <th>Subscription Type</th>
+            <th>Expiry Date</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let item of licenseList; let i=index">
+            <tr *ngIf="edit[i]">
+              <td>{{i+1}}</td>
+              <td>
+                {{licenseList[i]['id']}}
+              </td>
+              <td>
+                <ng-container *ngIf="licenseList[i]['activated']">Activated</ng-container>
+                <ng-container *ngIf="!licenseList[i]['activated']">Not Activated</ng-container>
+              </td>
+              <td>
+                <input md-input type="text" [(ngModel)]="licenseList[i]['licensed_to']">
+              </td>
+              <td>
+                <select [(ngModel)]="licenseList[i]['price_id']" (ngModelChange)="changePrice(i)">
+                	<option *ngFor="let price of priceList" [value]="price['id']">
+                  {{price['subscription_type']}}</option>
+                </select>
+              </td>
+              <td>{{licenseList[i]['expiry_date'] | date: "dd/MM/yyyy"}}</td>
+              <td>{{licenseList[i]['price']}}</td>
+              <td>
+                <m-icon (click)="edit[i] = !edit[i]; updateRecord(i)" [iconName]="'ic_done_black_24px'"></m-icon>
+              </td>
+            </tr>
+            <tr *ngIf="!edit[i]">
+              <td>{{i+1}}</td>
+              <td>{{licenseList[i]['id']}}</td>
+              <td>
+                <ng-container *ngIf="licenseList[i]['activated']">Activated</ng-container>
+                <ng-container *ngIf="!licenseList[i]['activated']">Not Activated</ng-container>
+              </td>
+              <td>{{item['licensed_to']}}</td>
+              <td>{{licenseList[i]['subscription_type']}}</td>
+              <td>{{item['expiry_date'] | date: "dd/MM/yyyy"}}</td>
+              <td>{{licenseList[i]['price']}}</td>
+              <td>
+                <m-icon *ngIf="!licenseList[i]['activated']" (click)="edit[i] = !edit[i]" 
+                [iconName]="'ic_create_black_24px'"></m-icon>
+              </td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+ -->

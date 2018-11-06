@@ -1,0 +1,59 @@
+<!-- <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <table>
+        <caption>Pice List</caption>
+        <thead>
+          <tr>
+            <th>
+              <m-icon (click)="addRecord()" [iconName]="'ic_add_box_black_24px'"></m-icon>
+            </th>
+            <th>Subscription Type</th>
+            <th>Price</th>
+            <th colspan="2">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let item of priceList; let i=index">
+            <tr *ngIf="edit[i]">
+              <td>{{i+1}}</td>
+              <td>
+                <md-select [(ngModel)]="priceList[i]['subscription_type']">
+                	<md-option [value]="'OneTimeActivation'">OneTimeActivation</md-option>
+                  <md-option [value]="'LifeTime'">LifeTime</md-option>
+                  <md-option [value]="'Yearly'">Yearly</md-option>
+                  <md-option [value]="'HalfYearly'">HalfYearly</md-option>
+                  <md-option [value]="'Quarterly'">Quarterly</md-option>
+                  <md-option [value]="'Monthly'">Monthly</md-option>
+                  <md-option [value]="'Weekly'">Weekly</md-option>
+                  <md-option [value]="'Daily'">Daily</md-option>
+                </md-select>
+              </td>
+              <td>
+                <input type="text" [(ngModel)]="priceList[i]['price']">
+              </td>
+              <td>
+                <m-icon (click)="edit[i] = !edit[i]; deleteRecord(i)" [iconName]="'ic_delete_black_24px'"></m-icon>
+              </td>
+              <td>
+                <m-icon (click)="edit[i] = !edit[i]; updateRecord(i)" [iconName]="'ic_done_black_24px'"></m-icon>
+              </td>
+            </tr>
+            <tr *ngIf="!edit[i]">
+              <td>{{i+1}}</td>
+              <td>{{item['subscription_type']}}</td>
+              <td>{{item['price']}}</td>
+              <td>
+                <m-icon (click)="deleteRecord(i)" [iconName]="'ic_delete_black_24px'"></m-icon>
+              </td>
+              <td>
+                <m-icon (click)="edit[i] = !edit[i]" [iconName]="'ic_create_black_24px'"></m-icon>
+              </td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+ -->

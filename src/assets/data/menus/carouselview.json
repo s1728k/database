@@ -1,0 +1,26 @@
+{
+    "name":"nature",
+    "data": [
+      {
+        "title":"view 1",
+        "img":"./assets/images/5656.jpg",
+        "content":"<div><p>Eco Nature Wordpress Theme is created to help you make world’s environment cleaner and save the nature. Unlimited design solutions can be created due to a great flexibility of settings and shortcode options. Eco Nature theme has a Portfolio that can be set to any sort of a grid or a Masonry puzzle with variable paddings for elements, while Blog can have several different layouts too. Custom Profiles and Projects post types offer an optimal way to present your ecology content.</p></div>",
+        "caption":"Chicago",
+        "active" : true
+      },
+      {
+        "title":"view 2",
+        "img":"./assets/images/5656.jpg",
+        "content":"<div><p>You can create any sort of Environment website, like a website for a ecology preserving movement, Green Earth organization, any sort of organic life project, animals saving fundraiser. Eco Nature comes with a Custom Mega Menu plugin, a really functional Form Builder and premium Revolution and Layer Slider plugins included for free. Multilanguage, RTL-ready, plugin-compatible and professionally-supported theme will make every day you work with your website be a great experience! With a special Donations functionality support, you can collect paypal donations for your ecology project, to save nature, animals and organic life.</p>",
+        "caption":"Los Angeles",
+        "active" : false
+      },
+      {
+        "title":"view 3",
+        "img":"./assets/images/5656.jpg",
+        "content":"<p>Teachers not only demonstrate specific learning concepts within the classroom, they can also participate in demonstration classrooms to help improve their own teaching strategies, which may or may not be demonstrative in nature. Although the literature is limited, studies show that the effects of demonstration classroom teachers includes a change of perspective in relating to students, more reflection in the teachers’ own classroom strategies, and more personal responsibility for student learning</p></div>",
+        "caption":"New York",
+        "active" : false
+      }
+    ]
+  }

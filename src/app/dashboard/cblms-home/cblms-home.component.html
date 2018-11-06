@@ -1,0 +1,98 @@
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li><a href="#!">two</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">three</a></li>
+</ul>
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo">Logo</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="sass.html">Sass</a></li>
+      <li><a href="badges.html">Components</a></li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h4 class="heading">How Cloud Based License Management System Works</h4>
+			<div class="row">
+				<div class="col-md-12">
+					<p><b>How it works</b></p>
+					<ul>
+						<li>First <a [routerLink]="['/cblms-home/signup']">register</a> to get unique user api key to your email</li>
+						<li>Login happens with only the unique user api key</li>
+						<li>Create new license by pressing + button and change the subscription type for your client.</li> 
+						<li>The new license record shall have unique <b>serial no.</b></li>
+						<li>When your client enters the unique serial number your software shall <b>send serial number and your user api key</b> to activate url in post body</li>
+						<li>Activate url can be seen in the test bench when you login in.</li>
+						<li>This will activate the license and send your software back <b>product_key and expiry date</b>.</li>
+						<li>Your software shall store this product_key in it private memory</li>
+						<li>To de-activate the license, your software shall send <b>serial number and product key along with your user api key to de-activate</b> url in post body</li>
+						<li>You will receive <b>status feedback for de-activation</b></li>
+						<li>Your client can deactivate to move the software to new device and then re-activate</li>
+						<li>Internet connection is required only at the time of activating and de-activating your software</li>
+						<li>Product key sent to your software at the time of activation is every time unique and require at the time of de-activation</li>
+						<li>Hardware code can be stored and checked by your software to ensure the software is not running on wrong machine. This activity is by your end</li>
+						<li>Value proposition of this cloud application is to provide you ability to extent yor software license to multiple machines with only definite number of user licenses.</li>
+						<li>Also this cloud application can provide you with serial number and product key for your license</li>
+						<li><b>Try it yourself</b> in the test bench after login in</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<h4 class="heading">No Direct Billing</h4>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<p>Pay once you use it commercially</p>
+		</div>
+	</div>
+	  <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
+    <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
+    <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
+    <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
+    <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+  </div>
+</div>
+<div class="carousel carousel-slider center" data-indicators="true">
+    <div class="carousel-fixed-item center">
+      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+    </div>
+    <div class="carousel-item red white-text" href="#one!">
+      <h2>First Panel</h2>
+      <p class="white-text">This is your first panel</p>
+    </div>
+    <div class="carousel-item amber white-text" href="#two!">
+      <h2>Second Panel</h2>
+      <p class="white-text">This is your second panel</p>
+    </div>
+    <div class="carousel-item green white-text" href="#three!">
+      <h2>Third Panel</h2>
+      <p class="white-text">This is your third panel</p>
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+      <h2>Fourth Panel</h2>
+      <p class="white-text">This is your fourth panel</p>
+    </div>
+  </div>
+<!-- <amexio-card-pane [showCard]="true">
+            <amexio-pane-header>
+              Content Carousel View
+            </amexio-pane-header>
+            <amexio-pane-body>
+              <amexio-carousel style="background-color: black;"
+                               [dataReader]="'data'"
+                               [httpMethod]="'get'"
+                               [httpUrl]="'assets/data/menus/carouselview.json'">
+              </amexio-carousel>
+            </amexio-pane-body>
+  </amexio-card-pane> -->
